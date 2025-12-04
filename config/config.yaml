@@ -10,20 +10,11 @@ crawler:
   use_proxy: false # 是否启用代理，false 时为关闭
   default_proxy: "http://127.0.0.1:10086"
 
-# 🔸 daily（当日汇总模式）
-#   • 推送时机：按时推送
-#   • 显示内容：当日所有匹配新闻 + 新增新闻区域
-#   • 适用场景：日报总结、全面了解当日热点趋势
-#
-# 🔸 current（当前榜单模式）
-#   • 推送时机：按时推送
-#   • 显示内容：当前榜单匹配新闻 + 新增新闻区域
-#   • 适用场景：实时热点追踪、了解当前最火的内容
-#
-# 🔸 incremental（增量监控模式）
-#   • 推送时机：有新增才推送
-#   • 显示内容：新出现的匹配频率词新闻
-#   • 适用场景：避免重复信息干扰
+
+
+ current（当前榜单模式）
+
+
 
 report:
   mode: "daily" # 可选: "daily"|"incremental"|"current"
@@ -50,7 +41,7 @@ notification:
   # 不然轻则手机上收到奇怪的广告推送，重则存在一定的安全隐患
   webhooks:
     feishu_url: "" # 飞书机器人的 webhook URL
-    dingtalk_url: "" # 钉钉机器人的 webhook URL
+    dingtalk_url: "https://oapi.dingtalk.com/robot/send?access_token=338a77722fc134e064829eebe4f59e47d962b615c8472608bf669b228cab4bff" # 钉钉机器人的 webhook URL
     wework_url: "" # 企业微信机器人的 webhook URL
     telegram_bot_token: "" # Telegram Bot Token
     telegram_chat_id: "" # Telegram Chat ID
